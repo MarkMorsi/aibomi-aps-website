@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { toast } from 'sonner'
+import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -68,6 +69,10 @@ function App() {
                             radial-gradient(circle at 80% 80%, oklch(0.45 0.18 265 / 0.15) 0%, transparent 50%),
                             radial-gradient(circle at 40% 20%, oklch(0.75 0.15 180 / 0.2) 0%, transparent 50%)`
           }} />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-[300px] opacity-20">
+          <CopenhagenSkyline className="w-full h-full text-primary" />
         </div>
 
         <header className="relative z-10 border-b border-border/50 backdrop-blur-sm">
@@ -148,8 +153,12 @@ function App() {
 
       <Separator className="max-w-6xl mx-auto" />
 
-      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-background via-primary/5 to-secondary/15">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-background via-primary/5 to-secondary/15 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[200px] opacity-10 rotate-180">
+          <CopenhagenSkyline className="w-full h-full text-accent" />
+        </div>
+        
+        <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-12 space-y-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
               Get in Touch
@@ -233,8 +242,12 @@ function App() {
         </div>
       </section>
 
-      <footer className="border-t border-border/50 py-12 px-6">
-        <div className="max-w-6xl mx-auto text-center space-y-4">
+      <footer className="relative border-t border-border/50 py-12 px-6 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-[180px] opacity-[0.07]">
+          <CopenhagenSkyline className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Aibomi ApS. Creating intelligent applications for end users.
           </p>
