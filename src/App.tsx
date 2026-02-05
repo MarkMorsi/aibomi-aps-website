@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { toast } from 'sonner'
 import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
+import { LittleMermaid } from '@/components/LittleMermaid'
+import { RoundTower } from '@/components/RoundTower'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -71,6 +73,14 @@ function App() {
           }} />
         </div>
         
+        <div className="absolute top-20 left-[5%] w-[120px] h-[120px] opacity-15">
+          <LittleMermaid className="w-full h-full text-secondary" />
+        </div>
+        
+        <div className="absolute top-10 right-[8%] w-[100px] h-[150px] opacity-20">
+          <RoundTower className="w-full h-full text-primary" />
+        </div>
+        
         <div className="absolute bottom-0 left-0 right-0 h-[300px] opacity-20">
           <CopenhagenSkyline className="w-full h-full text-primary" />
         </div>
@@ -104,7 +114,11 @@ function App() {
       </div>
 
       <section className="py-16 md:py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative">
+          <div className="absolute -top-10 right-[5%] w-[90px] h-[90px] opacity-8">
+            <LittleMermaid className="w-full h-full text-primary" />
+          </div>
+          
           <div className="text-center mb-12 md:mb-16 space-y-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
               What We Do
@@ -156,6 +170,14 @@ function App() {
       <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-background via-primary/5 to-secondary/15 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[200px] opacity-10 rotate-180">
           <CopenhagenSkyline className="w-full h-full text-accent" />
+        </div>
+        
+        <div className="absolute bottom-10 left-[10%] w-[80px] h-[80px] opacity-10">
+          <LittleMermaid className="w-full h-full text-accent" />
+        </div>
+        
+        <div className="absolute top-20 left-[5%] w-[70px] h-[100px] opacity-12">
+          <RoundTower className="w-full h-full text-secondary" />
         </div>
         
         <div className="max-w-3xl mx-auto relative z-10">
@@ -245,6 +267,14 @@ function App() {
       <footer className="relative border-t border-border/50 py-12 px-6 overflow-hidden">
         <div className="absolute bottom-0 left-0 right-0 h-[180px] opacity-[0.07]">
           <CopenhagenSkyline className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 right-[15%] w-[60px] h-[90px] opacity-[0.08]">
+          <RoundTower className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 left-[20%] w-[50px] h-[50px] opacity-[0.06]">
+          <LittleMermaid className="w-full h-full text-foreground" />
         </div>
         
         <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
