@@ -10,6 +10,7 @@ import { toast } from 'sonner'
 import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
 import { LittleMermaid } from '@/components/LittleMermaid'
 import { RoundTower } from '@/components/RoundTower'
+import { NyhavnHouses } from '@/components/NyhavnHouses'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -81,6 +82,10 @@ function App() {
           <RoundTower className="w-full h-full text-primary" />
         </div>
         
+        <div className="absolute top-40 right-[25%] w-[140px] h-[110px] opacity-25">
+          <NyhavnHouses className="w-full h-full" />
+        </div>
+        
         <div className="absolute bottom-0 left-0 right-0 h-[300px] opacity-20">
           <CopenhagenSkyline className="w-full h-full text-primary" />
         </div>
@@ -117,6 +122,10 @@ function App() {
         <div className="max-w-6xl mx-auto relative">
           <div className="absolute -top-10 right-[5%] w-[90px] h-[90px] opacity-8">
             <LittleMermaid className="w-full h-full text-primary" />
+          </div>
+          
+          <div className="absolute top-[40%] left-[2%] w-[110px] h-[85px] opacity-12">
+            <NyhavnHouses className="w-full h-full" />
           </div>
           
           <div className="text-center mb-12 md:mb-16 space-y-4">
@@ -178,6 +187,10 @@ function App() {
         
         <div className="absolute top-20 left-[5%] w-[70px] h-[100px] opacity-12">
           <RoundTower className="w-full h-full text-secondary" />
+        </div>
+        
+        <div className="absolute bottom-[30%] right-[5%] w-[130px] h-[100px] opacity-15">
+          <NyhavnHouses className="w-full h-full" />
         </div>
         
         <div className="max-w-3xl mx-auto relative z-10">
@@ -275,6 +288,10 @@ function App() {
         
         <div className="absolute bottom-8 left-[20%] w-[50px] h-[50px] opacity-[0.06]">
           <LittleMermaid className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 left-[45%] w-[90px] h-[70px] opacity-[0.09]">
+          <NyhavnHouses className="w-full h-full text-foreground" />
         </div>
         
         <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
