@@ -61,12 +61,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
-        <div className="absolute inset-0 opacity-20">
+      <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-primary/5">
+        <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, oklch(0.62 0.12 35 / 0.15) 0%, transparent 50%),
-                            radial-gradient(circle at 80% 80%, oklch(0.25 0.01 260 / 0.1) 0%, transparent 50%),
-                            radial-gradient(circle at 40% 20%, oklch(0.88 0.01 75 / 0.2) 0%, transparent 50%)`
+            backgroundImage: `radial-gradient(circle at 20% 50%, oklch(0.65 0.22 40 / 0.25) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, oklch(0.45 0.18 265 / 0.15) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 20%, oklch(0.75 0.15 180 / 0.2) 0%, transparent 50%)`
           }} />
         </div>
 
@@ -110,9 +110,9 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Globe size={28} weight="duotone" className="text-accent" />
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-primary/20 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center">
+                <Globe size={28} weight="duotone" className="text-primary" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">Web Applications</h4>
               <p className="text-muted-foreground leading-relaxed">
@@ -121,9 +121,9 @@ function App() {
               </p>
             </Card>
 
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <DeviceMobile size={28} weight="duotone" className="text-accent" />
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-secondary/30 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
+                <DeviceMobile size={28} weight="duotone" className="text-secondary" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">Mobile Apps</h4>
               <p className="text-muted-foreground leading-relaxed">
@@ -132,8 +132,8 @@ function App() {
               </p>
             </Card>
 
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-accent/30 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-accent/15 flex items-center justify-center">
                 <Code size={28} weight="duotone" className="text-accent" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">AI Coding</h4>
@@ -148,7 +148,7 @@ function App() {
 
       <Separator className="max-w-6xl mx-auto" />
 
-      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-background via-primary/5 to-secondary/15">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 space-y-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
