@@ -7,6 +7,10 @@ import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { toast } from 'sonner'
+import { CopenhagenSkyline } from '@/components/CopenhagenSkyline'
+import { LittleMermaid } from '@/components/LittleMermaid'
+import { RoundTower } from '@/components/RoundTower'
+import { NyhavnHouses } from '@/components/NyhavnHouses'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -61,19 +65,34 @@ function App() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
-        <div className="absolute inset-0 opacity-20">
+      <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-primary/5">
+        <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 20% 50%, oklch(0.62 0.12 35 / 0.15) 0%, transparent 50%),
-                            radial-gradient(circle at 80% 80%, oklch(0.25 0.01 260 / 0.1) 0%, transparent 50%),
-                            radial-gradient(circle at 40% 20%, oklch(0.88 0.01 75 / 0.2) 0%, transparent 50%)`
+            backgroundImage: `radial-gradient(circle at 20% 50%, oklch(0.65 0.22 40 / 0.25) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, oklch(0.45 0.18 265 / 0.15) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 20%, oklch(0.75 0.15 180 / 0.2) 0%, transparent 50%)`
           }} />
         </div>
+        
+        <div className="absolute top-20 left-[5%] w-[120px] h-[120px] opacity-15">
+          <LittleMermaid className="w-full h-full text-secondary" />
+        </div>
+        
+        <div className="absolute top-10 right-[8%] w-[100px] h-[150px] opacity-20">
+          <RoundTower className="w-full h-full text-primary" />
+        </div>
+        
+        <div className="absolute top-40 right-[25%] w-[140px] h-[110px] opacity-25">
+          <NyhavnHouses className="w-full h-full" />
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0 h-[300px] opacity-20">
+          <CopenhagenSkyline className="w-full h-full text-primary" />
+        </div>
 
-        <header className="relative z-10 border-b border-border/50 backdrop-blur-sm">
-          <div className="max-w-6xl mx-auto px-6 py-6">
-            <div className="flex items-center justify-between">
-              <h1 className="text-2xl font-bold tracking-tight text-primary">Aibomi ApS</h1>
+        <header className="relative z-10 backdrop-blur-sm">
+          <div className="max-w-6xl mx-auto px-6 py-4">
+            <div className="flex items-center justify-end">
               <a 
                 href="mailto:info@aibomi.eu"
                 className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-accent transition-colors"
@@ -87,9 +106,12 @@ function App() {
 
         <section className="relative z-10 py-24 md:py-32 px-6">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-[56px] font-bold tracking-tight leading-[1.1] text-foreground">
-              AI-Powered Apps for the Modern Web
-            </h2>
+            <div className="space-y-2 mb-8">
+              <p className="text-sm md:text-base font-medium tracking-wide text-primary/70 uppercase">Aibomi ApS</p>
+              <h1 className="text-4xl md:text-[56px] font-bold tracking-tight leading-[1.1] text-foreground">
+                AI-Powered Apps for the Modern Web
+              </h1>
+            </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               We specialize in creating intelligent web and mobile applications that solve real problems. 
               Expert AI coding meets thoughtful design.
@@ -99,7 +121,15 @@ function App() {
       </div>
 
       <section className="py-16 md:py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto relative">
+          <div className="absolute -top-10 right-[5%] w-[90px] h-[90px] opacity-8">
+            <LittleMermaid className="w-full h-full text-primary" />
+          </div>
+          
+          <div className="absolute top-[40%] left-[2%] w-[110px] h-[85px] opacity-12">
+            <NyhavnHouses className="w-full h-full" />
+          </div>
+          
           <div className="text-center mb-12 md:mb-16 space-y-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
               What We Do
@@ -110,9 +140,9 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Globe size={28} weight="duotone" className="text-accent" />
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-primary/20 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-primary/15 flex items-center justify-center">
+                <Globe size={28} weight="duotone" className="text-primary" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">Web Applications</h4>
               <p className="text-muted-foreground leading-relaxed">
@@ -121,9 +151,9 @@ function App() {
               </p>
             </Card>
 
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
-                <DeviceMobile size={28} weight="duotone" className="text-accent" />
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-secondary/30 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center">
+                <DeviceMobile size={28} weight="duotone" className="text-secondary" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">Mobile Apps</h4>
               <p className="text-muted-foreground leading-relaxed">
@@ -132,8 +162,8 @@ function App() {
               </p>
             </Card>
 
-            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm">
-              <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
+            <Card className="p-8 space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-accent/30 bg-card/80 backdrop-blur-sm">
+              <div className="w-12 h-12 rounded-lg bg-accent/15 flex items-center justify-center">
                 <Code size={28} weight="duotone" className="text-accent" />
               </div>
               <h4 className="text-2xl font-medium text-foreground">AI Coding</h4>
@@ -148,8 +178,24 @@ function App() {
 
       <Separator className="max-w-6xl mx-auto" />
 
-      <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-background to-secondary/20">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative py-16 md:py-24 px-6 bg-gradient-to-b from-background via-primary/5 to-secondary/15 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[200px] opacity-10 rotate-180">
+          <CopenhagenSkyline className="w-full h-full text-accent" />
+        </div>
+        
+        <div className="absolute bottom-10 left-[10%] w-[80px] h-[80px] opacity-10">
+          <LittleMermaid className="w-full h-full text-accent" />
+        </div>
+        
+        <div className="absolute top-20 left-[5%] w-[70px] h-[100px] opacity-12">
+          <RoundTower className="w-full h-full text-secondary" />
+        </div>
+        
+        <div className="absolute bottom-[30%] right-[5%] w-[130px] h-[100px] opacity-15">
+          <NyhavnHouses className="w-full h-full" />
+        </div>
+        
+        <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-12 space-y-4">
             <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
               Get in Touch
@@ -233,8 +279,24 @@ function App() {
         </div>
       </section>
 
-      <footer className="border-t border-border/50 py-12 px-6">
-        <div className="max-w-6xl mx-auto text-center space-y-4">
+      <footer className="relative border-t border-border/50 py-12 px-6 overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-[180px] opacity-[0.07]">
+          <CopenhagenSkyline className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 right-[15%] w-[60px] h-[90px] opacity-[0.08]">
+          <RoundTower className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 left-[20%] w-[50px] h-[50px] opacity-[0.06]">
+          <LittleMermaid className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="absolute bottom-8 left-[45%] w-[90px] h-[70px] opacity-[0.09]">
+          <NyhavnHouses className="w-full h-full text-foreground" />
+        </div>
+        
+        <div className="max-w-6xl mx-auto text-center space-y-4 relative z-10">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Aibomi ApS. Creating intelligent applications for end users.
           </p>
